@@ -32,7 +32,7 @@ render(){
           <Text style={styles.title}>Hand Glove App</Text>
 
         </View>
-        {this.state.user.readings && <View style={styles.container2}>
+        {this.state.user.reading && <View style={styles.container2}>
           <View style={styles.container3}>
               <View style={styles.imagebg}><Text style={{color:"#fff",fontSize:32}}>Y</Text></View>
               <Text style={styles.name}>{this.state.user.name}</Text>
@@ -45,23 +45,23 @@ render(){
           </View>
           <View style={styles.container5odd}>
               <Text style={{width: "50%"}}>Index Finger</Text>
-              <Text>23</Text>
-              <Text>24</Text>
+              <Text>{this.state.user.reading.mcp[0]}</Text>
+              <Text>{this.state.user.reading.pip[0]}</Text>
           </View>
           <View style={styles.container5}>
-              <Text style={{width: "50%"}}>Index Finger</Text>
-              <Text>23</Text>
-              <Text>24</Text>
+              <Text style={{width: "50%"}}>Middle Finger</Text>
+              <Text>{this.state.user.reading.mcp[1]}</Text>
+              <Text>{this.state.user.reading.pip[1]}</Text>
           </View>
           <View style={styles.container5odd}>
-              <Text style={{width: "50%"}}>Index Finger</Text>
-              <Text>23</Text>
-              <Text>24</Text>
+              <Text style={{width: "50%"}}>Ring Finger</Text>
+              <Text>{this.state.user.reading.mcp[2]}</Text>
+              <Text>{this.state.user.reading.pip[2]}</Text>
           </View>
           <View style={styles.container5}>
-              <Text style={{width: "50%"}}>Index Finger</Text>
-              <Text>23</Text>
-              <Text>24</Text>
+              <Text style={{width: "50%"}}>Little Finger</Text>
+              <Text>{this.state.user.reading.mcp[3]}</Text>
+              <Text>{this.state.user.reading.pip[3]}</Text>
           </View>
         </View>}
         {!this.state.user.readings && <View style={styles.container2}>
